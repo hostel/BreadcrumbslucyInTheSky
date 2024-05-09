@@ -1,0 +1,49 @@
+@font-face {
+    font-weight: 400;
+    font-family: 'DMSans';
+    font-style: normal;
+    src: url('../../public/fonts/DMSans/DMSans-Regular.ttf');
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-weight: 500;
+    font-family: 'DMSans';
+    font-style: normal;
+    src: url('../../public/fonts/DMSans/DMSans-Medium.ttf');
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-weight: 700;
+    font-family: 'DMSans';
+    font-style: normal;
+    src: url('../../public/fonts/DMSans/DMSans-Bold.ttf');
+    font-display: swap;
+  }
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100%;
+    color: var(--black);
+    font-family: var(--mainFontFamily);
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: var(--regular);
+    background-color: var(--mainBackground);
+}
+
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }

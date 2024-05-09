@@ -1,0 +1,41 @@
+.empty {
+    text-align: center;
+    font-size: 25px;
+    font-weight: var(--bold);
+
+    svg {
+        width: 100px;
+        height: auto;
+    }
+}
+
+.item {
+    max-width: 750px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: var(--bold);
+}   
+
+.size {
+    font-size: 16px;
+    font-weight: var(--bold);
+    color: var(--accent)
+}
+
+.button {
+    border: none;
+    background-color: var(--white);
+    color: var(--accent);
+    cursor: pointer;
+
+    svg {
+        width: 30px;
+        height: auto;
+    }
+}
+
+.wrapPlaceOrderButton {
+    margin-top:10px;
+}

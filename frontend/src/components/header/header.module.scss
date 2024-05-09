@@ -1,0 +1,30 @@
+.wrap {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.cartIcon {
+    svg {
+        width: 30px;
+        height: auto;
+    }
+}
+
+.wrapCartIcon {
+    position: relative;
+}
+
+.amountItems {
+    position: absolute;
+    min-width: 20px;
+    font-size: 10px;
+    font-weight: var(--bold);
+    text-align: center;
+    color: var(--white);
+    background: var(--accent);
+    border-radius: 100%;
+    right: -6px;
+    top: -5px;
+    
+}

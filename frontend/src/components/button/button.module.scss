@@ -1,0 +1,86 @@
+.button {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight:var(--bold);
+
+  padding: 11px 19px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border 0.2s ease;
+  appearance: none;
+  user-select: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    outline: none;
+  }
+
+  &:not(.loading).disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+
+  color: var(--white);
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+
+  &:hover {
+    background-color: #661aff;
+    border: 1px solid get-color #661aff;
+  }
+
+  &:active {
+    background-color: #8438ff;
+    border: 1px solid #8438ff;
+}
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.withoutChildren {
+  margin: 0;
+}
+
+a.button {
+  text-decoration: none;
+}
+
+
+
+// .loading {
+//   @include generate-skin-style('tertiary', 'base');
+
+//   color: transparent;
+//   background-image: url('../../../assets/svg/spinner.svg');
+//   background-repeat: no-repeat;
+//   background-position: center center;
+//   background-size: 30px auto;
+//   user-select: none;
+//   pointer-events: none;
+
+//   &:hover,
+//   &:active {
+//     background-color: get-color('background', 'white');
+//   }
+
+//   > * {
+//     visibility: hidden;
+//   }
+// }
+

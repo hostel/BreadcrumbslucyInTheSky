@@ -1,0 +1,21 @@
+.wrap {
+    margin: 20px 0;
+}
+
+.button {
+    padding: 10px;
+    font-weight: var(--bold);
+    border: 1px solid var(--border);
+    background: var(--mainBackground);
+    cursor: pointer;
+
+    &:hover:not(:disabled) {
+        color: var(--white);
+        background: var(--accent);
+    }
+}
+
+.active {
+    color: var(--white);
+    background: var(--accent);
+}

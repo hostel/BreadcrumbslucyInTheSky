@@ -1,0 +1,17 @@
+.size {
+    padding: 10px;
+    font-weight: var(--bold);
+    border: 1px solid var(--border);
+    background: var(--mainBackground);
+    cursor: pointer;
+
+    &:hover {
+        color: var(--white);
+        background: var(--accent);
+    }
+}
+
+.activeSize {
+    color: var(--white);
+    background: var(--accent);
+}

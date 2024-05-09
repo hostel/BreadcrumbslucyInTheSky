@@ -1,0 +1,27 @@
+.card {
+    border: 1px solid var(--border);
+}
+
+.wrapImage {
+    position: relative;
+}
+
+.wrapSizes {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+}
+
+.model {
+    position: absolute;
+    top: 5px; 
+    right: 5px;;
+    padding: 10px;
+    font-weight: var(--bold);
+    border: 1px solid var(--border);
+    cursor: pointer;
+}
+
+.info {
+    padding: 10px;
+}

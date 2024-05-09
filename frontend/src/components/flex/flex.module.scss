@@ -1,0 +1,40 @@
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.fixedWidth {
+    max-width: 1500px;
+    width: 100%;
+}
+
+.direction-row {
+    flex-direction: row;
+}
+
+.direction-column {
+    flex-direction: column;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.alignItems-start {
+    align-items: flex-start;
+}
+
+.alignItems-center {
+    align-items: center;
+}

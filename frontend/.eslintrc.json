@@ -1,0 +1,31 @@
+{
+  "extends": ["next", "prettier"],
+  "plugins": ["simple-import-sort"],
+  "rules": {
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          // Packages. `react` related packages come first.
+          ["^react", "^@?\\w"],
+          // Internal packages.
+          ["^(app|components|constants|hooks|services|store|styles|api|types|utils)(/.*|$)"],
+          // Side effect imports.
+          ["^\\u0000"],
+          [
+            // Parent imports.
+            "^\\.\\.(?!/?$)",
+            // Put `..` last among parent imports.
+            "^\\.\\./?$",
+            // Other relative imports. Put same-folder imports and `.` last.
+            "^\\./(?=.*/)(?!/?$)",
+            "^\\.(?!/?$)",
+            "^\\./?$",
+            // Style imports.
+            "^.+\\.s?css$"
+          ]
+        ]
+      }
+    ]
+  }
+}
