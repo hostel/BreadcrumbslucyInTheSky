@@ -20,7 +20,7 @@ export const Button = ({ isLoading, children, onClick }: TButtonProps) => {
   };
 
   return (
-    <button {...commonProps} type="button" onClick={onClick}>
+    <button {...commonProps} type="button" disabled={isLoading} onClick={onClick}>
       <div>{children}</div>
     </button>
   );

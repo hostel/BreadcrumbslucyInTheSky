@@ -1,22 +1,25 @@
 import type { Action, ThunkAction } from '@reduxjs/toolkit';
 import { configureStore } from '@reduxjs/toolkit';
 
-import { cart } from 'app/cart/store/reducer';
-import { product } from 'app/product/store/reducer';
-import { products } from 'app/products/store/reducer';
+import { cartApi } from 'api/cart/queries';
+import { productsApi } from 'api/product/queries';
+import { cartStorage } from 'app/cart/store/reducer';
 
-export const store = configureStore({
-  reducer: {
-    products,
-    product,
-    cart,
-  },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
-});
+export const makeStore = () => {
+  return configureStore({
+    reducer: {
+      cartStorage,
 
-export type RootState = ReturnType<typeof store.getState>;
+      [productsApi.reducerPath]: productsApi.reducer,
+      [cartApi.reducerPath]: cartApi.reducer,
+    },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(productsApi.middleware, cartApi.middleware),
+  });
+};
 
-// Infer the `AppDispatch` type from the store itself
-export type AppDispatch = typeof store.dispatch;
+export type AppStore = ReturnType<typeof makeStore>;
+
+export type RootState = ReturnType<AppStore['getState']>;
+export type AppDispatch = AppStore['dispatch'];
 
 export type AppThunk<ThunkReturnType = void> = ThunkAction<ThunkReturnType, RootState, unknown, Action>;

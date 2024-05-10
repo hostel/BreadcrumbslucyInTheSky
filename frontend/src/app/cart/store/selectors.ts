@@ -6,13 +6,9 @@ import { RootState } from 'services/store';
 
 import { TCounterItem } from './actions';
 
-const selectCart = (state: RootState) => state.cart;
+export const getCartStorage = (state: RootState) => state.cartStorage;
 
-export const getIsLoading = createSelector(selectCart, ({ isLoading }) => {
-  return isLoading;
-});
-
-export const getItems = createSelector(selectCart, (state) => {
+export const getItems = createSelector(getCartStorage, (state) => {
   return Object.values(state.counter).reduce((acc, value) => {
     acc.push({
       ...value,
@@ -37,7 +33,7 @@ export const getListForPlaceOrder = createSelector(getItems, (arr) => {
   return result;
 });
 
-export const getAmountItems = createSelector(selectCart, (state) => {
+export const getAmountItems = createSelector(getCartStorage, (state) => {
   return Object.entries(state.counter).reduce((acc, [key, value]) => {
     return (acc += value.count);
   }, 0);
